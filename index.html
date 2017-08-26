@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Daily Horoscope</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/gl-favicon.ico" type="image/x-icon" />
+    <!-- Fonts -->
+    <script src="https://use.fontawesome.com/b4869d6fbe.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=MedievalSharp|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+  <div class="container-fluid bg-img">
+    <div class="container heading">
+      <h1 class="col-lg-12 headline">Your Daily Horoscope</h1>
+      <h2 class="col-lg-12">What Does Today Have In Store For You?</h2>
+      <h3 class="col-lg-12">Choose your Birth Month and Day</h3>
+    </div>
+    <!-- This div with id loader adds a loader when user hits submit button -->
+    <!-- When page loads, the outer div uses the hidden class to hide the loader 
+    It shows only when a user clicks the button -->
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+
+    <!-- TO DO: ADD Image -->
+    <!-- <img id='zodiac-img' src="img/capricorn-2-128.png" alt="zodiac sign"> -->
+    <!-- TO DO: Hide day when month doesn't have 31 -->
+    <div class="container user-input">
+      <div class="form-group">
+        <select class="form-control" id="month">
+        <!-- Dropdown for months -->
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option>        
+        </select>
+      </div>
+      <div class="form-group">
+        <select class="form-control" id="day">
+        <!-- Dropdown for days -->
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+          <option>13</option>
+          <option>14</option>
+          <option>15</option>
+          <option>16</option>
+          <option>17</option>
+          <option>18</option>
+          <option>19</option>
+          <option>20</option>
+          <option>21</option>
+          <option>22</option>
+          <option>23</option>
+          <option>24</option> 
+          <option>25</option>
+          <option>26</option>
+          <option>27</option>
+          <option>28</option>
+          <option>29</option>
+          <option>30</option>
+          <option>31</option>               
+        </select>
+      </div>
+      <div>
+        <button type ="button" class="button btn btn-primary btn-lg center-block btn-custom" id='submit'>Submit</button>
+      </div>
+    </div> <!-- end of dropdown container -->
+
+    <div class="container">
+      <div class="row main-content">
+       <h1 class="zodiac" id='sign'></h1> 
+       <!-- icons from http://www.iconsdb.com/white-icons/aries-2-icon.html -->
+       <h2 id='date'></h2> <!-- API delivers date -->
+        <h3 id='message'> <!-- API shows message -->
+          
+        </h3>
+      </div>
+    </div>
+
+  </div> <!-- End jumbotron div -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- My JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
